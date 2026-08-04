@@ -35,7 +35,7 @@ a{text-decoration:none;color:inherit}
 nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:18px 32px}
 .logo{font-family:'Fraunces';font-weight:400;font-size:1.32rem;letter-spacing:.01em;color:var(--ink)}
-.logo span{color:var(--accent)}
+.logo span{color:var(--accent)}.logo{display:inline-flex;align-items:center;gap:10px}.logo .mark{width:38px;height:38px;flex:none;object-fit:contain}
 .nlinks{display:flex;gap:30px;align-items:center}
 .nlinks a{font-size:.86rem;font-weight:500;letter-spacing:.04em;color:var(--soft)}.nlinks a:hover{color:var(--ink)}
 .nav-give{border:1px solid var(--ink);padding:.5em 1.15em;border-radius:3px}.nav-give:hover{background:var(--ink);color:var(--paper)}
@@ -52,12 +52,10 @@ nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--paper) 8
 .hero .sched .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(200,85,46,.18)}
 .hero .sched b{color:var(--ink);font-family:'Fraunces';font-weight:400;font-size:1.02rem}
 .hero .sched span{color:var(--dim);font-size:.86rem}
-.hero .media{position:relative;overflow:hidden;background:
-  radial-gradient(90% 70% at 70% 25%,rgba(255,196,150,.9),transparent 60%),
-  radial-gradient(80% 80% at 20% 90%,rgba(233,170,190,.75),transparent 62%),
-  linear-gradient(160deg,#f3d9c4,#e9c1ce 60%,#d9b8cf)}
-.hero .media::after{content:"[ Hero photo — youth worship across the region ]";position:absolute;bottom:24px;left:24px;right:24px;color:rgba(33,29,22,.42);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase}
-.hero .media .grain{position:absolute;inset:0;opacity:.28;mix-blend-mode:multiply;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.hero .media{position:relative;overflow:hidden;background:#171310}
+.hero .media img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.hero .media::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,19,16,.14),transparent 34%,transparent 62%,rgba(23,19,16,.46)),linear-gradient(90deg,rgba(23,19,16,.22),transparent 32%)}
+.hero .media .grain{position:absolute;inset:0;z-index:2;opacity:.15;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
 /* SECTIONS */
 .sec{padding:118px 0;position:relative}
@@ -99,7 +97,11 @@ nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--paper) 8
 .vcol{display:grid;grid-template-rows:1fr 1fr;gap:20px}
 .vid .pl{position:absolute;top:18px;left:18px;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.55);backdrop-filter:blur(4px);display:grid;place-items:center;color:var(--ink);font-size:1.05rem}
 .vid .k{position:absolute;top:24px;right:20px;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);font-weight:600;background:rgba(255,255,255,.6);padding:4px 9px;border-radius:100px}
-.vid h4{font-family:'Fraunces';font-weight:400;color:var(--ink);font-size:1.15rem;z-index:2}
+.vid h4{font-family:'Fraunces';font-weight:400;color:var(--ink);font-size:1.15rem;z-index:2;position:relative}
+.vid img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.vid .scrim{position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,19,16,.1),transparent 45%,rgba(23,19,16,.74))}
+.vid.has-img h4{color:#fff}
+.vid.has-img .pl,.vid.has-img .k{background:rgba(0,0,0,.42);color:#fff}
 
 /* event — one dark cinematic band */
 .event{position:relative;padding:150px 0;text-align:center;overflow:hidden;background:var(--dark)}
@@ -162,7 +164,7 @@ footer h2 em{font-style:italic;color:#f0a97f}
 </div></div>
 
 <nav><div class="nav-in">
-  <a class="logo" href="index.html">MFM<span>·</span>Youth</a>
+  <a class="logo" href="index.html"><img class="mark" src="img/emblem-pink.png" alt="MFM Mega Region 2 Youth emblem">MFM<span>·</span>Youth</a>
   <div class="nlinks"><a href="about.html">About</a><a href="visit.html">Visit</a><a href="watch.html">Watch</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a><a href="connect.html">Connect</a><a class="nav-give" href="give.html">Give</a></div><button class="burger" aria-label="Menu">☰</button>
 </div></nav>
 
@@ -175,7 +177,7 @@ footer h2 em{font-style:italic;color:#f0a97f}
     <div class="row"><a class="btn solid" href="visit.html">Plan a Visit</a><a class="btn" href="watch.html">▶ Watch Live</a></div>
     <div class="sched"><span class="dot"></span><b>Now meeting in person</b><span>· Resurgence Center, Houston · Sundays 9–11 AM</span></div>
   </div>
-  <div class="media"><div class="grain"></div></div>
+  <div class="media"><img class="bg" src="img/hero-youth.jpg" alt="Youth and young adults in worship at MFM Mega Region 2"><div class="grain"></div></div>
 </header>
 
 <!-- VISIT US — featured physical location -->
@@ -202,10 +204,10 @@ footer h2 em{font-style:italic;color:#f0a97f}
 <section class="sec white" id="watch"><div class="wrap">
   <div class="sec-head reveal"><span class="eyebrow">Watch &amp; Grow</span><h2>Catch the <em>latest</em> messages.</h2><p>Wherever you are in the region, grow with us — teaching, praise and drama, updated from our YouTube channel.</p></div>
   <div class="watch">
-    <a class="vid main reveal" href="watch.html"><div class="pl">▶</div><span class="k">Word</span><h4>Word of Exhortation — Pastor Israel Emmanuel</h4></a>
+    <a class="vid main reveal" id="homeVidMain" href="watch.html"><div class="pl">▶</div><span class="k">Latest</span><h4>Latest Sunday Service</h4></a>
     <div class="vcol">
-      <a class="vid a reveal" href="watch.html"><div class="pl">▶</div><span class="k">Praise</span><h4>Praise Session</h4></a>
-      <a class="vid b reveal" href="watch.html"><div class="pl">▶</div><span class="k">Dance</span><h4>Dallas Dance Group</h4></a>
+      <a class="vid a reveal" id="homeVidA" href="watch.html"><div class="pl">▶</div><span class="k">Watch</span><h4>Recent Message</h4></a>
+      <a class="vid b reveal" id="homeVidB" href="watch.html"><div class="pl">▶</div><span class="k">Watch</span><h4>Recent Message</h4></a>
     </div>
   </div>
 </div></section>
@@ -261,6 +263,18 @@ footer h2 em{font-style:italic;color:#f0a97f}
 <script>
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+(function homeYT(){
+  function ytClean(t){return (t||'').split('|')[0].replace(/\s+/g,' ').trim();}
+  function set(el,v){ if(!el||!v)return; el.href=v.url; el.setAttribute('target','_blank'); el.setAttribute('rel','noopener'); el.classList.add('has-img');
+    el.insertAdjacentHTML('afterbegin','<img class="bg" alt="" src="'+v.thumb+'"><div class="scrim"></div>');
+    var h=el.querySelector('h4'); if(h)h.textContent=ytClean(v.title); }
+  fetch('/.netlify/functions/youtube').then(function(r){return r.json()}).then(function(d){
+    var v=(d&&d.videos)||[]; if(!v.length)return;
+    set(document.getElementById('homeVidMain'),v[0]);
+    set(document.getElementById('homeVidA'),v[1]);
+    set(document.getElementById('homeVidB'),v[2]);
+  }).catch(function(){});
+})();
 </script>
 <script>document.addEventListener("click",function(e){if(e.target&&e.target.classList&&e.target.classList.contains("burger")){var n=document.querySelector(".nlinks");if(n)n.classList.toggle("open");}});</script><div class="socfab" id="socfab"><div class="items"><a class="yt" href="https://youtube.com/@mfmmegaregion2yc" target="_blank" rel="noopener" aria-label="YouTube" title="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a><a class="ig" href="https://instagram.com/mfmmegaregion2yc" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg></a><a class="cn" href="links.html" aria-label="Connect With Us" title="Connect With Us"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/></svg></a></div><button class="toggle" aria-label="Open social links" onclick="this.parentElement.classList.toggle('open')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4"/><path d="M15.4 6.5l-6.8 4"/></svg></button></div></body>
 </html>

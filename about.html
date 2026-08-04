@@ -22,7 +22,7 @@ a{text-decoration:none;color:inherit}
 .tiebar a{color:#f0d9cb;font-weight:500}.tiebar a:hover{color:#fff}
 nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:18px 32px}
-.logo{font-family:'Fraunces';font-weight:400;font-size:1.32rem;color:var(--ink)}.logo span{color:var(--accent)}
+.logo{font-family:'Fraunces';font-weight:400;font-size:1.32rem;color:var(--ink)}.logo span{color:var(--accent)}.logo{display:inline-flex;align-items:center;gap:10px}.logo .mark{width:38px;height:38px;flex:none;object-fit:contain}
 .nlinks{display:flex;gap:30px;align-items:center}.nlinks a{font-size:.86rem;font-weight:500;letter-spacing:.04em;color:var(--soft)}.nlinks a:hover{color:var(--ink)}.nlinks a.on{color:var(--ink);border-bottom:1px solid var(--accent);padding-bottom:2px}
 .nav-give{border:1px solid var(--ink);padding:.5em 1.15em;border-radius:3px}.nav-give:hover{background:var(--ink);color:var(--paper)}
 
@@ -43,7 +43,8 @@ nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--paper) 8
 
 /* two-col story */
 .story{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
-.story .media{aspect-ratio:4/5;border:1px solid var(--line);position:relative;background:linear-gradient(160deg,#f0dcc8,#e5c4cf);display:grid;place-items:center}
+.story .media{aspect-ratio:4/5;border:1px solid var(--line);position:relative;overflow:hidden;background:#171310;display:grid;place-items:center}
+.story .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .story .media span{color:rgba(33,29,22,.4);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:0 20px}
 .story h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:20px}
 .story h2 em{font-style:italic;color:var(--accent)}
@@ -89,7 +90,7 @@ footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}foote
 <body>
 <div class="tiebar"><div class="wrap"><span>Youth &amp; Young Adult Church · MFM Mega Region 2, USA</span><a href="https://mfmmegaregion2usa.org" target="_blank" rel="noopener">Visit the main church →</a></div></div>
 <nav><div class="nav-in">
-  <a class="logo" href="index.html">MFM<span>·</span>Youth</a>
+  <a class="logo" href="index.html"><img class="mark" src="img/emblem-pink.png" alt="MFM Mega Region 2 Youth emblem">MFM<span>·</span>Youth</a>
   <div class="nlinks"><a class="on" href="about.html">About</a><a href="visit.html">Visit</a><a href="watch.html">Watch</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a><a href="connect.html">Connect</a><a class="nav-give" href="give.html">Give</a></div><button class="burger" aria-label="Menu">☰</button>
 </div></nav>
 
@@ -107,7 +108,7 @@ footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}foote
       <p>Nobody comes to the Mountain of Fire and Miracles Ministries by chance. We exist to help youth and young adults discover their identity in Christ, understand the power of prayer, and learn to defend and live out their faith.</p>
       <p>Across every campus and city in Mega Region 2, we're raising a generation of young people who love Jesus, live holy, pray with fire, and boldly shine His light everywhere they go.</p>
     </div>
-    <div class="media"><span>[ Photo — youth gathered in worship ]</span></div>
+    <div class="media"><img src="img/worship-congregation.jpg" alt="Youth and young adults gathered in worship with hands raised"></div>
   </div>
 </div></section>
 
@@ -125,7 +126,7 @@ footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}foote
 
 <section class="sec"><div class="wrap">
   <div class="story reveal">
-    <div class="media"><span>[ Photo — MFM Resurgence Center, Houston ]</span></div>
+    <div class="media"><img src="img/worship-team.jpg" alt="Worship team ministering at MFM Resurgence Center, Houston"></div>
     <div>
       <span class="tag">Our Home · Houston</span>
       <h2>MFM <em>Resurgence Center.</em></h2>
