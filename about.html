@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — MFM Mega Region 2 Youth & Young Adult Church</title>
+<meta name="description" content="Who we are: the youth & young adult church of MFM Mega Region 2, USA — helping a generation rise into purpose. Now meeting in person at MFM Resurgence Center, Houston.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--paper:#f7f3ec;--paper-2:#fffdf9;--white:#fff;--ink:#211d16;--soft:#5f584c;--dim:#9b9284;--line:#e6dfd1;--accent:#c8552e;--dark:#171310;--dark-soft:#b9b0a2;--max:1220px}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:'Inter Tight',sans-serif;background:var(--paper);color:var(--soft);line-height:1.62;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{font-family:'Fraunces',serif;font-weight:300;line-height:1.05;letter-spacing:-.012em;color:var(--ink)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
+a{text-decoration:none;color:inherit}
+.eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.28em;text-transform:uppercase;color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:.55em;font-weight:500;font-size:.9rem;padding:.95em 1.9em;border-radius:3px;border:1px solid var(--ink);color:var(--ink);transition:.3s;cursor:pointer;background:transparent}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn.solid{background:var(--accent);border-color:var(--accent);color:#fff}.btn.solid:hover{background:var(--ink);border-color:var(--ink)}
+.tiebar{background:var(--dark);color:var(--dark-soft);font-size:.76rem}
+.tiebar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:9px 32px;flex-wrap:wrap}
+.tiebar a{color:#f0d9cb;font-weight:500}.tiebar a:hover{color:#fff}
+nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:18px 32px}
+.logo{font-family:'Fraunces';font-weight:400;font-size:1.32rem;color:var(--ink)}.logo span{color:var(--accent)}
+.nlinks{display:flex;gap:30px;align-items:center}.nlinks a{font-size:.86rem;font-weight:500;letter-spacing:.04em;color:var(--soft)}.nlinks a:hover{color:var(--ink)}.nlinks a.on{color:var(--ink);border-bottom:1px solid var(--accent);padding-bottom:2px}
+.nav-give{border:1px solid var(--ink);padding:.5em 1.15em;border-radius:3px}.nav-give:hover{background:var(--ink);color:var(--paper)}
+
+/* page hero */
+.phero{padding:96px 0 76px;border-bottom:1px solid var(--line)}
+.phero .eyebrow{display:block;margin-bottom:22px}
+.phero h1{font-size:clamp(2.8rem,6.4vw,5.4rem);max-width:16ch;margin-bottom:24px}
+.phero h1 em{font-style:italic;color:var(--accent)}
+.phero p{font-size:1.2rem;max-width:34em}
+
+.sec{padding:104px 0;position:relative}
+.sec.white{background:var(--white)}
+.sec-head{max-width:38em;margin-bottom:48px}
+.sec-head.center{margin:0 auto 48px;text-align:center}
+.sec-head .eyebrow{display:block;margin-bottom:16px}
+.sec-head h2{font-size:clamp(2rem,4.4vw,3.2rem)}.sec-head h2 em{font-style:italic;color:var(--accent)}
+.sec-head p{margin-top:14px}
+
+/* two-col story */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.story .media{aspect-ratio:4/5;border:1px solid var(--line);position:relative;background:linear-gradient(160deg,#f0dcc8,#e5c4cf);display:grid;place-items:center}
+.story .media span{color:rgba(33,29,22,.4);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;text-align:center;padding:0 20px}
+.story h2{font-size:clamp(1.9rem,3.6vw,2.8rem);margin-bottom:20px}
+.story h2 em{font-style:italic;color:var(--accent)}
+.story p{margin-bottom:16px}
+.story .tag{display:inline-block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:16px}
+
+/* pillars */
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.pillars .p{background:var(--paper);padding:34px 30px}
+.pillars .p .n{font-family:'Fraunces';font-style:italic;color:var(--accent);font-size:1.3rem;margin-bottom:14px}
+.pillars .p h4{font-size:1.2rem;color:var(--ink);font-weight:400;margin-bottom:8px}
+.pillars .p p{font-size:.9rem}
+
+/* covering */
+.covering{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.lead-card{background:var(--white);border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.lead-card .ph{aspect-ratio:1/1;background:linear-gradient(160deg,#ece2d4,#e0d0c2);display:grid;place-items:center;color:var(--dim);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;overflow:hidden}
+.lead-card .ph img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.lead-card .b{padding:24px}
+.lead-card .role{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:8px}
+.lead-card h4{font-family:'Fraunces';font-weight:400;font-size:1.4rem;color:var(--ink);margin-bottom:6px}
+.lead-card p{font-size:.9rem}
+
+/* scripture band (dark) */
+.scripture{background:var(--dark);color:#fff;padding:110px 0;text-align:center;position:relative;overflow:hidden}
+.scripture .bg{position:absolute;inset:0;background:radial-gradient(70% 90% at 50% 10%,rgba(200,85,46,.32),transparent 55%)}
+.scripture .in{position:relative;z-index:2;max-width:24em;margin:0 auto}
+.scripture .eyebrow{color:#f0a97f;display:block;margin-bottom:20px}
+.scripture blockquote{font-family:'Fraunces';font-weight:300;font-style:italic;font-size:clamp(1.6rem,3.4vw,2.4rem);color:#fff;line-height:1.3;margin-bottom:16px}
+.scripture cite{color:var(--dark-soft);font-style:normal;font-size:.8rem;letter-spacing:.14em;text-transform:uppercase}
+
+footer{background:var(--dark);color:var(--dark-soft);padding:100px 0 40px;text-align:center}
+footer .eyebrow{display:block;margin-bottom:22px;color:#f0a97f}
+footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}footer h2 em{font-style:italic;color:#f0a97f}
+.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px;text-align:left;margin-top:76px;padding-top:38px;border-top:1px solid rgba(255,255,255,.14)}
+.foot-grid h5{font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:#8f8678;margin-bottom:16px}
+.foot-grid a,.foot-grid p{display:block;color:var(--dark-soft);font-size:.9rem;margin-bottom:8px}.foot-grid a:hover{color:#fff}
+.family{margin-top:38px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:.82rem;color:#8f8678;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.family a{color:#f0d9cb}
+.reveal{opacity:0;transform:translateY(26px);transition:.9s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
+@media(max-width:880px){.nlinks{display:none}.story,.pillars,.covering,.foot-grid{grid-template-columns:1fr}.story .media{display:none}}
+</style></head>
+<body>
+<div class="tiebar"><div class="wrap"><span>Youth &amp; Young Adult Church · MFM Mega Region 2, USA</span><a href="#">Visit the main church →</a></div></div>
+<nav><div class="nav-in">
+  <a class="logo" href="index.html">MFM<span>·</span>Youth</a>
+  <div class="nlinks"><a class="on" href="about.html">About</a><a href="watch.html">Watch</a><a href="visit.html">Visit</a><a href="connect.html">Connect</a><a class="nav-give" href="give.html">Give</a></div>
+</div></nav>
+
+<header class="phero"><div class="wrap">
+  <span class="eyebrow">About Us</span>
+  <h1>Helping a generation <em>rise into purpose.</em></h1>
+  <p>We're the youth &amp; young adult church of MFM Mega Region 2, USA — a family of young people across the region encountering the power of God for discovery, recovery and restoration.</p>
+</div></header>
+
+<section class="sec"><div class="wrap">
+  <div class="story reveal">
+    <div>
+      <span class="tag">Who We Are</span>
+      <h2>A place to <em>encounter</em> the power of God.</h2>
+      <p>Nobody comes to the Mountain of Fire and Miracles Ministries by chance. We exist to help youth and young adults discover their identity in Christ, understand the power of prayer, and learn to defend and live out their faith.</p>
+      <p>Across every campus and city in Mega Region 2, we're raising a generation of young people who love Jesus, live holy, pray with fire, and boldly shine His light everywhere they go.</p>
+    </div>
+    <div class="media"><span>[ Photo — youth gathered in worship ]</span></div>
+  </div>
+</div></section>
+
+<section class="sec white"><div class="wrap">
+  <div class="sec-head center reveal"><span class="eyebrow">What We're Building</span><h2>Six things we grow in <em>together.</em></h2></div>
+  <div class="pillars reveal">
+    <div class="p"><div class="n">i</div><h4>Identity in Christ</h4><p>Discovering who you truly are — and Whose you are.</p></div>
+    <div class="p"><div class="n">ii</div><h4>The Power of Prayer</h4><p>Learning to war and win on your knees.</p></div>
+    <div class="p"><div class="n">iii</div><h4>Practical Evangelism</h4><p>Sharing and defending your faith with boldness.</p></div>
+    <div class="p"><div class="n">iv</div><h4>Godly Relationships</h4><p>Healthy, God-honoring friendships and community.</p></div>
+    <div class="p"><div class="n">v</div><h4>Purity of Heart</h4><p>Guarding your heart and walking in wisdom.</p></div>
+    <div class="p"><div class="n">vi</div><h4>Discovery &amp; Recovery</h4><p>Restoration and a fresh encounter with God's power.</p></div>
+  </div>
+</div></section>
+
+<section class="sec"><div class="wrap">
+  <div class="story reveal">
+    <div class="media"><span>[ Photo — MFM Resurgence Center, Houston ]</span></div>
+    <div>
+      <span class="tag">Our Home · Houston</span>
+      <h2>MFM <em>Resurgence Center.</em></h2>
+      <p>An open door has been set before us that no one can shut. Resurgence Center is our first physical home — a place in Houston where the youth of the region can gather in person to worship, pray, and grow.</p>
+      <p><strong style="color:var(--ink);font-weight:600">Pastor Adebayo Asoro</strong> leads the Resurgence Center family, and there's a seat waiting for you. Come as you are.</p>
+      <a class="btn solid" href="visit.html" style="margin-top:10px">Plan a Visit</a>
+    </div>
+  </div>
+</div></section>
+
+<section class="sec white"><div class="wrap">
+  <div class="sec-head center reveal"><span class="eyebrow">Our Covering</span><h2>Under a house of <em>fire.</em></h2><p>We are the youth arm of Mountain of Fire and Miracles Ministries, Mega Region 2 — and we stand under its covering.</p></div>
+  <div class="covering reveal">
+    <div class="lead-card"><div class="ph"><img src="img/dr-dk-olukoya.jpg" alt="Dr. D.K. Olukoya"></div><div class="b"><div class="role">General Overseer · MFM Worldwide</div><h4>Dr. D.K. Olukoya</h4><p>General Overseer of Mountain of Fire and Miracles Ministries worldwide.</p></div></div>
+    <div class="lead-card"><div class="ph"><img src="img/couple-gold.jpg" alt="Pastor Olumide & Pastor (Mrs.) Oni"></div><div class="b"><div class="role">Mega Region 2 · USA</div><h4>Pastor Olumide &amp; Pastor (Mrs.) Oni</h4><p>Principal Regional Overseer and co-labourer over Mega Region 2.</p></div></div>
+    <div class="lead-card"><div class="ph">[ Portrait ]</div><div class="b"><div class="role">MFM Resurgence Center</div><h4>Pastor Adebayo Asoro</h4><p>Shepherds the Resurgence Center youth family in Houston.</p></div></div>
+  </div>
+</div></section>
+
+<section class="scripture"><div class="bg"></div><div class="wrap in">
+  <span class="eyebrow">Our Word</span>
+  <blockquote>“I must work the works of him that sent me, while it is day.”</blockquote>
+  <cite>— John 9:4</cite>
+</div></section>
+
+<footer><div class="wrap">
+  <span class="eyebrow reveal">Come As You Are</span>
+  <h2 class="reveal">There's a place<br>for <em>you.</em></h2>
+  <div class="reveal"><a class="btn solid" href="visit.html">Plan Your Visit</a></div>
+  <div class="foot-grid">
+    <div><h5>MFM Youth · Mega Region 2</h5><p>The Youth &amp; Young Adult Church of MFM Mega Region 2, USA. Raising young believers rooted in Christ, strengthened through prayer, equipped to live victorious, fire-filled lives.</p></div>
+    <div><h5>Visit In Person</h5><p>MFM Resurgence Center<br>6910 North Eldridge Pkwy, Back Suite<br>Houston, TX 77041</p><a href="tel:3464145880">(346) 414-5880</a></div>
+    <div><h5>Explore</h5><a href="about.html">About</a><a href="watch.html">Watch</a><a href="visit.html">Visit</a><a href="connect.html">Connect</a><a href="give.html">Give</a></div>
+  </div>
+  <div class="family"><span>The Youth &amp; Young Adult Church of MFM Mega Region 2, USA — part of Mountain of Fire and Miracles Ministries.</span><a href="#">Main Church →</a></div>
+</div></footer>
+<script>
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script></body></html>
