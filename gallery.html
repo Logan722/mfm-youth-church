@@ -51,12 +51,12 @@ footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}foote
 .reveal{opacity:0;transform:translateY(26px);transition:.9s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
 @media(max-width:880px){.nlinks{display:none}.masonry{columns:2}.foot-grid{grid-template-columns:1fr}}
 @media(max-width:560px){.masonry{columns:1}}
-</style></head>
+.burger{display:none;background:none;border:0;font-size:1.5rem;line-height:1;color:var(--ink);cursor:pointer;padding:2px 4px}@media(max-width:880px){.burger{display:block}.nlinks{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;border-bottom:1px solid var(--line);padding:6px 0;box-shadow:0 16px 28px -16px rgba(0,0,0,.28)}.nlinks.open{display:flex}.nlinks a{padding:13px 32px}.nlinks a.nav-give{margin:8px 32px;text-align:center}}</style></head>
 <body>
 <div class="tiebar"><div class="wrap"><span>Youth &amp; Young Adult Church · MFM Mega Region 2, USA</span><a href="#">Visit the main church →</a></div></div>
 <nav><div class="nav-in">
   <a class="logo" href="index.html">MFM<span>·</span>Youth</a>
-  <div class="nlinks"><a href="about.html">About</a><a href="watch.html">Watch</a><a href="visit.html">Visit</a><a href="connect.html">Connect</a><a class="nav-give" href="give.html">Give</a></div>
+  <div class="nlinks"><a href="about.html">About</a><a href="visit.html">Visit</a><a href="watch.html">Watch</a><a href="events.html">Events</a><a class="on" href="gallery.html">Gallery</a><a href="connect.html">Connect</a><a class="nav-give" href="give.html">Give</a></div><button class="burger" aria-label="Menu">☰</button>
 </div></nav>
 
 <header class="phero"><div class="wrap">
@@ -88,7 +88,7 @@ footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}foote
   <div class="foot-grid">
     <div><h5>MFM Youth · Mega Region 2</h5><p>The Youth &amp; Young Adult Church of MFM Mega Region 2, USA. Raising young believers rooted in Christ, strengthened through prayer, equipped to live victorious, fire-filled lives.</p></div>
     <div><h5>Visit In Person</h5><p>MFM Resurgence Center<br>6910 North Eldridge Pkwy, Back Suite<br>Houston, TX 77041</p><a href="tel:3464145880">(346) 414-5880</a></div>
-    <div><h5>Explore</h5><a href="about.html">About</a><a href="watch.html">Watch</a><a href="visit.html">Visit</a><a href="connect.html">Connect</a><a href="give.html">Give</a></div>
+    <div><h5>Explore</h5><a href="about.html">About</a><a href="visit.html">Visit</a><a href="watch.html">Watch</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a><a href="connect.html">Connect</a><a href="give.html">Give</a></div>
   </div>
   <div class="family"><span>The Youth &amp; Young Adult Church of MFM Mega Region 2, USA — part of Mountain of Fire and Miracles Ministries.</span><a href="#">Main Church →</a></div>
 </div></footer>
@@ -96,4 +96,4 @@ footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}foote
 const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.08});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 document.querySelectorAll('.filter button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter button').forEach(x=>x.classList.remove('on'));b.classList.add('on')}));
-</script></body></html>
+</script><script>document.addEventListener("click",function(e){if(e.target&&e.target.classList&&e.target.classList.contains("burger")){var n=document.querySelector(".nlinks");if(n)n.classList.toggle("open");}});</script></body></html>
