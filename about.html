@@ -59,6 +59,7 @@ nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--paper) 8
 
 /* covering */
 .covering{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.yl{grid-template-columns:repeat(2,1fr);max-width:760px;margin-left:auto;margin-right:auto}
 .lead-card{background:var(--white);border:1px solid var(--line);border-radius:6px;overflow:hidden}
 .lead-card .ph{aspect-ratio:1/1;background:linear-gradient(160deg,#ece2d4,#e0d0c2);display:grid;place-items:center;color:var(--dim);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;overflow:hidden}
 .lead-card .ph img{width:100%;height:100%;object-fit:cover;object-position:center top}
@@ -83,7 +84,7 @@ footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}foote
 .foot-grid a,.foot-grid p{display:block;color:var(--dark-soft);font-size:.9rem;margin-bottom:8px}.foot-grid a:hover{color:#fff}
 .family{margin-top:38px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:.82rem;color:#8f8678;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.family a{color:#f0d9cb}
 .reveal{opacity:0;transform:translateY(26px);transition:.9s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
-@media(max-width:880px){.nlinks{display:none}.story,.pillars,.covering,.foot-grid{grid-template-columns:1fr}.story .media{display:none}}
+@media(max-width:880px){.nlinks{display:none}.story,.pillars,.covering,.foot-grid{grid-template-columns:1fr}.story .media{aspect-ratio:16/10}}
 .burger{display:none;background:none;border:0;font-size:1.5rem;line-height:1;color:var(--ink);cursor:pointer;padding:2px 4px}@media(max-width:880px){.burger{display:block}.nlinks{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;gap:0;border-bottom:1px solid var(--line);padding:6px 0;box-shadow:0 16px 28px -16px rgba(0,0,0,.28)}.nlinks.open{display:flex}.nlinks a{padding:13px 32px}.nlinks a.nav-give{margin:8px 32px;text-align:center}}.socfab{position:fixed;right:22px;bottom:22px;z-index:150}.socfab .toggle{width:54px;height:54px;border-radius:50%;background:var(--accent);color:#fff;border:0;cursor:pointer;display:grid;place-items:center;box-shadow:0 12px 28px -8px var(--accent);transition:transform .3s}.socfab .toggle svg{width:23px;height:23px}.socfab.open .toggle{transform:rotate(90deg)}.socfab .items{position:absolute;right:4px;bottom:64px;display:flex;flex-direction:column;gap:12px;opacity:0;transform:translateY(12px) scale(.9);transform-origin:bottom center;pointer-events:none;transition:.28s cubic-bezier(.2,.7,.2,1)}.socfab.open .items{opacity:1;transform:none;pointer-events:auto}.socfab .items a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid var(--line);box-shadow:0 8px 22px -8px rgba(0,0,0,.4);transition:transform .2s,border-color .2s;color:var(--ink)}.socfab .items a svg{width:20px;height:20px}.socfab .items a.yt{color:#ff0000}.socfab .items a.ig{color:#e1306c}.socfab .items a.cn{color:var(--accent)}.socfab .items a:hover{transform:scale(1.1);border-color:currentColor}</style></head>
 <body>
 <div class="tiebar"><div class="wrap"><span>Youth &amp; Young Adult Church · MFM Mega Region 2, USA</span><a href="https://mfmmegaregion2usa.org" target="_blank" rel="noopener">Visit the main church →</a></div></div>
@@ -143,7 +144,7 @@ footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}foote
     <div class="lead-card"><div class="ph"><img src="img/couple-blue.jpg" alt="Pastor Olumide and Pastor (Mrs.) Oni"></div><div class="b"><div class="role">Mega Region 2 · USA</div><h4>Pastor Olumide &amp; Pastor (Mrs.) Oni</h4><p>Principal Regional Overseer of Mega Region 2, USA.</p></div></div>
   </div>
   <div class="sec-head center reveal" style="margin-top:74px"><span class="eyebrow">Youth Leadership</span><h2>Those who <em>shepherd</em> us.</h2></div>
-  <div class="covering reveal" style="max-width:760px;margin-left:auto;margin-right:auto;grid-template-columns:repeat(2,1fr)">
+  <div class="covering yl reveal">
     <div class="lead-card"><div class="ph"><img src="img/pastor-israel-emmanuel.jpg" alt="Pastor Israel Emmanuel"></div><div class="b"><div class="role">National Youth Coordinator · Americas &amp; Caribbean</div><h4>Pastor Israel Emmanuel</h4><p>Oversees the youth &amp; young adults across the Americas and Caribbean.</p></div></div>
     <div class="lead-card"><div class="ph"><img src="img/pastor-asoro.jpg" alt="Pastor Adebayo Asoro"></div><div class="b"><div class="role">Regional Youth Coordinator · Mega Region 2</div><h4>Pastor Adebayo Asoro</h4><p>Leads the youth &amp; young adults across Mega Region 2, and pastors MFM Resurgence Center, Houston.</p></div></div>
   </div>
