@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="color-scheme" content="light"><link rel="icon" type="image/png" href="img/emblem-pink.png"><link rel="apple-touch-icon" href="img/emblem-pink.png">
 <title>MFM Mega Region 2 · Youth & Young Adult Church — USA</title>
 <meta name="description" content="The Youth & Young Adult Church of MFM Mega Region 2, USA — every young person across the region. Now meeting in person at MFM Resurgence Center, Houston.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=Inter+Tight:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{
+:root{color-scheme:light;
   --paper:#f7f3ec;--paper-2:#fffdf9;--white:#ffffff;
   --ink:#211d16;--soft:#5f584c;--dim:#9b9284;--line:#e6dfd1;
   --accent:#c8552e;--accent-soft:#efe0d5;
@@ -35,14 +35,14 @@ a{text-decoration:none;color:inherit}
 nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--paper) 86%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 .nav-in{display:flex;align-items:center;justify-content:space-between;max-width:var(--max);margin:0 auto;padding:18px 32px}
 .logo{font-family:'Fraunces';font-weight:400;font-size:1.32rem;letter-spacing:.01em;color:var(--ink)}
-.logo span{color:var(--accent)}.logo{display:inline-flex;align-items:center;gap:10px}.logo .mark{width:38px;height:38px;flex:none;object-fit:contain}
+.logo span{color:var(--accent)}.logo{display:inline-flex;align-items:center;gap:11px}.logo .mark{width:42px;height:42px;flex:none;object-fit:contain}.logo .wm{display:flex;flex-direction:column;line-height:1.05}.logo .wm b{font-family:'Fraunces';font-weight:400;font-size:1.16rem;color:inherit}.logo .wm i{font-style:normal;font-family:'Inter Tight';font-weight:600;font-size:.54rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-top:3px;white-space:nowrap}
 .nlinks{display:flex;gap:30px;align-items:center}
 .nlinks a{font-size:.86rem;font-weight:500;letter-spacing:.04em;color:var(--soft)}.nlinks a:hover{color:var(--ink)}
 .nav-give{border:1px solid var(--ink);padding:.5em 1.15em;border-radius:3px}.nav-give:hover{background:var(--ink);color:var(--paper)}
 
 /* HERO */
 .hero{display:grid;grid-template-columns:1.02fr .98fr;min-height:calc(100vh - 104px)}
-.hero .txt{display:flex;flex-direction:column;justify-content:center;padding:70px 64px 70px max(32px,calc((100vw - var(--max))/2 + 32px))}
+.hero .txt{display:flex;flex-direction:column;justify-content:center;padding:70px 64px 70px clamp(32px,6vw,120px)}
 .hero .eyebrow{margin-bottom:26px}
 .hero h1{font-size:clamp(2.9rem,6vw,5.4rem);margin-bottom:24px}
 .hero h1 em{font-style:italic;font-weight:300;color:var(--accent)}
@@ -164,7 +164,7 @@ footer h2 em{font-style:italic;color:#f0a97f}
 </div></div>
 
 <nav><div class="nav-in">
-  <a class="logo" href="index.html"><img class="mark" src="img/emblem-pink.png" alt="MFM Mega Region 2 Youth emblem">MFM<span>·</span>Youth</a>
+  <a class="logo" href="index.html"><img class="mark" src="img/emblem-pink.png" alt="MFM Mega Region 2 Youth emblem"><span class="wm"><b>MFM Youth</b><i>&amp; Young Adult Church</i></span></a>
   <div class="nlinks"><a href="about.html">About</a><a href="visit.html">Visit</a><a href="watch.html">Watch</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a><a href="connect.html">Connect</a><a class="nav-give" href="give.html">Give</a></div><button class="burger" aria-label="Menu">☰</button>
 </div></nav>
 
@@ -216,10 +216,10 @@ footer h2 em{font-style:italic;color:#f0a97f}
 <section class="event">
   <div class="bg"></div><div class="grain"></div>
   <div class="wrap in reveal">
-    <span class="eyebrow">Save The Date</span>
-    <h2>International Youth<br><em>Convention</em> 2026</h2>
-    <div class="meta"><div><div class="k">When</div><div class="v">July 16–19</div></div><div><div class="k">Where</div><div class="v">Houston, TX</div></div><div><div class="k">Who</div><div class="v">You</div></div></div>
-    <div><a class="btn" href="events.html">Register Now</a></div>
+    <span class="eyebrow">Every Week · In Person</span>
+    <h2>Revival <em>Connect</em></h2>
+    <div class="meta"><div><div class="k">When</div><div class="v">Thursdays · 7 PM</div></div><div><div class="k">Where</div><div class="v">Houston, TX</div></div><div><div class="k">What</div><div class="v">Bible Study</div></div></div>
+    <div><a class="btn" href="events.html">See What's On →</a></div>
   </div>
 </section>
 
@@ -250,7 +250,7 @@ footer h2 em{font-style:italic;color:#f0a97f}
   <h2 class="reveal">Ready to catch<br>the <em>fire?</em></h2>
   <div class="reveal"><a class="btn solid" href="visit.html">Plan Your Visit</a></div>
   <div class="foot-grid">
-    <div><h5>MFM Youth · Mega Region 2</h5><p>The Youth &amp; Young Adult Church of MFM Mega Region 2, USA. Raising young believers rooted in Christ, strengthened through prayer, equipped to live victorious, fire-filled lives.</p></div>
+    <div><h5>MFM Youth &amp; Young Adult Church</h5><p>The Youth &amp; Young Adult Church of MFM Mega Region 2, USA. Raising young believers rooted in Christ, strengthened through prayer, equipped to live victorious, fire-filled lives.</p></div>
     <div><h5>Visit In Person</h5><p>MFM Resurgence Center<br>6910 North Eldridge Pkwy, Back Suite<br>Houston, TX 77041</p><a href="tel:3464145880">(346) 414-5880</a></div>
     <div><h5>Explore</h5><a href="about.html">About</a><a href="visit.html">Visit</a><a href="watch.html">Watch</a><a href="events.html">Events</a><a href="gallery.html">Gallery</a><a href="connect.html">Connect</a><a href="give.html">Give</a><a href="links.html">Connect With Us</a></div>
   </div>
