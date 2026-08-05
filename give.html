@@ -26,15 +26,24 @@ nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--paper) 8
 .nav-give{border:1px solid var(--accent);color:var(--accent);padding:.5em 1.15em;border-radius:3px}.nav-give:hover{background:var(--accent);color:#fff}
 
 /* hero split */
-.ghero{display:grid;grid-template-columns:1.05fr .95fr;min-height:60vh}
-.ghero .t{display:flex;flex-direction:column;justify-content:center;padding:80px 60px 80px clamp(32px,6vw,120px)}
-.ghero .eyebrow{display:block;margin-bottom:22px}
-.ghero h1{font-size:clamp(2.8rem,6vw,5.2rem);margin-bottom:22px}.ghero h1 em{font-style:italic;color:var(--accent)}
-.ghero p{font-size:1.16rem;max-width:26em;margin-bottom:30px}
-.ghero .media{position:relative;overflow:hidden;background:radial-gradient(80% 70% at 70% 30%,rgba(255,196,150,.9),transparent 60%),linear-gradient(160deg,#f0dcc8,#e3bcc9)}
-.ghero .media .verse{position:absolute;inset:0;display:grid;place-items:center;padding:40px;text-align:center}
-.ghero .media .verse blockquote{font-family:'Fraunces';font-style:italic;font-weight:300;color:var(--ink);font-size:clamp(1.4rem,2.4vw,1.9rem);line-height:1.35;max-width:16ch}
-.ghero .media .verse cite{display:block;margin-top:14px;font-style:normal;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600}
+.gh{position:relative;min-height:70vh;display:grid;place-items:center;text-align:center;overflow:hidden;background:#171310;padding:96px 0}
+.gh img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 38%;opacity:.42}
+.gh .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,19,16,.55),rgba(23,19,16,.35) 40%,rgba(23,19,16,.85))}
+.gh .in{position:relative;z-index:2;max-width:40em;padding:0 24px}
+.gh .eyebrow{display:block;margin-bottom:16px;color:var(--gold,#c9952c)}
+.gh h1{color:#fff;font-size:clamp(3rem,7vw,5.4rem);margin:0 0 20px}.gh h1 em{color:var(--peach,#f0a97f);font-style:italic}
+.gh p{color:#e9dfd0;font-size:1.15rem;max-width:30em;margin:0 auto}
+.zcard{max-width:1080px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:20px;padding:48px 52px;display:grid;grid-template-columns:auto 1fr;gap:72px;align-items:center;box-shadow:0 40px 80px -48px rgba(23,19,16,.55)}
+.zcard .qr{width:480px;height:480px;justify-self:start;border-radius:22px;border:1px solid var(--line);padding:18px;background:#fff}
+.zcard .right{text-align:left;min-width:0}
+.zcard .zt{display:inline-flex;align-items:center;gap:12px;font-family:'Fraunces';font-weight:400;font-size:2.4rem;margin-bottom:8px}
+.zcard .zt .dot{width:46px;height:46px;border-radius:12px;background:#6d1ed4;color:#fff;display:grid;place-items:center;font-weight:700;font-family:'Inter Tight';font-size:1.5rem}
+.zcard .sub{font-size:1.08rem;color:var(--soft);margin-bottom:28px}
+.zcard .recip{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:9px}
+.zcard .email{font-family:'Inter Tight';font-weight:600;font-size:1.04rem;letter-spacing:-.01em;background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:15px 18px;margin-bottom:22px;white-space:nowrap;overflow-x:auto}
+.zcard .btn{width:100%;font-size:1.1rem;padding:1em 1.6em;justify-content:center}
+@media(max-width:980px){.zcard{grid-template-columns:1fr;gap:30px;padding:40px;text-align:center}.zcard .right{text-align:center}.zcard .qr{width:min(480px,84vw);height:auto;aspect-ratio:1;margin:0 auto}.zcard .zt{justify-content:center}}
+@media(max-width:560px){.zcard{padding:26px}.gh{min-height:60vh;padding:72px 0}}
 
 .sec{padding:96px 0}
 .sec.white{background:var(--white)}
@@ -66,7 +75,7 @@ footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}foote
 .family{margin-top:38px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);font-size:.82rem;color:#8f8678;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.family a{color:#f0d9cb}
 .reveal{opacity:0;transform:translateY(26px);transition:.9s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
 @media(max-width:880px){.nlinks{display:none}.ghero{grid-template-columns:1fr}.ghero .t{padding:60px 0 40px}.ghero .media{min-height:44vh}.methods,.impact,.foot-grid{grid-template-columns:1fr}}
-.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:9px;cursor:pointer;background:none;border:0;position:relative;z-index:61}.nav-hamburger span{display:block;width:100%;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s;transform-origin:center}.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav-hamburger.open span:nth-child(2){opacity:0}.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}.drawer-overlay{position:fixed;inset:0;background:rgba(23,19,16,.55);z-index:190;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}.drawer-overlay.open{opacity:1;visibility:visible}.drawer{position:fixed;top:0;right:0;width:min(330px,86vw);height:100vh;height:100dvh;background:var(--dark);z-index:200;transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;overflow-y:auto}.drawer.open{transform:translateX(0)}body.drawer-open{overflow:hidden}.drawer-header{padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.12);display:flex;align-items:center;gap:12px}.drawer-header img{width:40px;height:40px;object-fit:contain;flex:none}.drawer-header span{font-family:'Fraunces';font-weight:400;font-size:.92rem;color:#fff;line-height:1.15}.drawer-close{margin-left:auto;background:none;border:0;color:#fff;font-size:1.9rem;line-height:1;cursor:pointer;padding:0 2px;flex:none}.drawer-nav{padding:14px 0;flex:1;background:transparent;position:static;border:0;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;top:auto;z-index:auto}.drawer-nav a{display:block;padding:14px 24px;font-family:'Inter Tight';font-size:1.02rem;font-weight:500;color:var(--dark-soft);transition:background .2s,color .2s}.drawer-nav a:hover,.drawer-nav a.active{background:rgba(200,85,46,.14);color:#fff}.drawer-nav a.active{border-right:3px solid var(--accent)}.drawer-nav a.drawer-cta{margin:14px 24px 0;background:var(--accent);color:#fff;border-radius:4px;text-align:center;font-weight:600}.drawer-nav a.drawer-cta:hover{background:#fff;color:var(--dark)}.drawer-footer{padding:22px 24px;border-top:1px solid rgba(255,255,255,.12)}.drawer-scripture{font-family:'Fraunces';font-style:italic;font-size:.85rem;color:var(--dark-soft);line-height:1.5}.drawer-scripture cite{display:block;font-style:normal;font-family:'Inter Tight';font-size:.78rem;color:#f0a97f;margin-top:6px}@media(max-width:880px){.nav-hamburger{display:flex}.nlinks{display:none}}.socfab{position:fixed;right:22px;bottom:22px;z-index:150}.socfab .toggle{width:54px;height:54px;border-radius:50%;background:var(--accent);color:#fff;border:0;cursor:pointer;display:grid;place-items:center;box-shadow:0 12px 28px -8px var(--accent);transition:transform .3s}.socfab .toggle svg{width:23px;height:23px}.socfab.open .toggle{transform:rotate(90deg)}.socfab .items{position:absolute;right:4px;bottom:64px;display:flex;flex-direction:column;gap:12px;opacity:0;transform:translateY(12px) scale(.9);transform-origin:bottom center;pointer-events:none;transition:.28s cubic-bezier(.2,.7,.2,1)}.socfab.open .items{opacity:1;transform:none;pointer-events:auto}.socfab .items a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid var(--line);box-shadow:0 8px 22px -8px rgba(0,0,0,.4);transition:transform .2s,border-color .2s;color:var(--ink)}.socfab .items a svg{width:20px;height:20px}.socfab .items a.yt{color:#ff0000}.socfab .items a.ig{color:#e1306c}.socfab .items a.cn{color:var(--accent)}.socfab .items a:hover{transform:scale(1.1);border-color:currentColor}/*MOBILE-REFINE*/@media(max-width:640px){.socfab{right:16px;bottom:16px}.socfab .toggle{width:48px;height:48px}.socfab .toggle svg{width:20px;height:20px}.socfab .items a{width:42px;height:42px}.wrap{padding:0 20px}.nav-in{padding:14px 20px}.tiebar .wrap{padding:8px 20px}.sec{padding:58px 0}.sec-head{margin-bottom:30px}.phero{padding:66px 0 30px}.hero{min-height:auto}.hero .txt{padding:40px 0 36px}.hero .media{min-height:52vh}.foot-grid{margin-top:48px;gap:24px}footer{padding:64px 0 34px}.logo .mark{width:36px;height:36px}.logo .wm b{font-size:1.02rem}.logo .wm i{font-size:.5rem}}</style></head>
+.nav-hamburger{display:none;flex-direction:column;justify-content:center;gap:5px;width:44px;height:44px;padding:9px;cursor:pointer;background:none;border:0;position:relative;z-index:61}.nav-hamburger span{display:block;width:100%;height:2px;background:var(--ink);border-radius:2px;transition:transform .3s,opacity .3s;transform-origin:center}.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}.nav-hamburger.open span:nth-child(2){opacity:0}.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}.drawer-overlay{position:fixed;inset:0;background:rgba(23,19,16,.55);z-index:190;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}.drawer-overlay.open{opacity:1;visibility:visible}.drawer{position:fixed;top:0;right:0;width:min(330px,86vw);height:100vh;height:100dvh;background:var(--dark);z-index:200;transform:translateX(100%);transition:transform .42s cubic-bezier(.2,.7,.2,1);display:flex;flex-direction:column;overflow-y:auto}.drawer.open{transform:translateX(0)}body.drawer-open{overflow:hidden}.drawer-header{padding:22px 24px;border-bottom:1px solid rgba(255,255,255,.12);display:flex;align-items:center;gap:12px}.drawer-header img{width:40px;height:40px;object-fit:contain;flex:none}.drawer-header span{font-family:'Fraunces';font-weight:400;font-size:.92rem;color:#fff;line-height:1.15}.drawer-close{margin-left:auto;background:none;border:0;color:#fff;font-size:1.9rem;line-height:1;cursor:pointer;padding:0 2px;flex:none}.drawer-nav{padding:14px 0;flex:1;background:transparent;position:static;border:0;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;top:auto;z-index:auto}.drawer-nav a{display:block;padding:14px 24px;font-family:'Inter Tight';font-size:1.02rem;font-weight:500;color:var(--dark-soft);transition:background .2s,color .2s}.drawer-nav a:hover,.drawer-nav a.active{background:rgba(200,85,46,.14);color:#fff}.drawer-nav a.active{border-right:3px solid var(--accent)}.drawer-nav a.drawer-cta{margin:14px 24px 0;background:var(--accent);color:#fff;border-radius:4px;text-align:center;font-weight:600}.drawer-nav a.drawer-cta:hover{background:#fff;color:var(--dark)}.drawer-footer{padding:22px 24px;border-top:1px solid rgba(255,255,255,.12)}.drawer-scripture{font-family:'Fraunces';font-style:italic;font-size:.85rem;color:var(--dark-soft);line-height:1.5}.drawer-scripture cite{display:block;font-style:normal;font-family:'Inter Tight';font-size:.78rem;color:#f0a97f;margin-top:6px}@media(max-width:880px){.nav-hamburger{display:flex}.nlinks{display:none}}.socfab{position:fixed;right:22px;bottom:22px;z-index:150}.socfab .toggle{width:54px;height:54px;border-radius:50%;background:var(--accent);color:#fff;border:0;cursor:pointer;display:grid;place-items:center;box-shadow:0 12px 28px -8px var(--accent);transition:transform .3s}.socfab .toggle svg{width:23px;height:23px}.socfab.open .toggle{transform:rotate(90deg)}.socfab .items{position:absolute;right:4px;bottom:64px;display:flex;flex-direction:column;gap:12px;opacity:0;transform:translateY(12px) scale(.9);transform-origin:bottom center;pointer-events:none;transition:.28s cubic-bezier(.2,.7,.2,1)}.socfab.open .items{opacity:1;transform:none;pointer-events:auto}.socfab .items a{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid var(--line);box-shadow:0 8px 22px -8px rgba(0,0,0,.4);transition:transform .2s,border-color .2s;color:var(--ink)}.socfab .items a svg{width:20px;height:20px}.socfab .items a.yt{color:#ff0000}.socfab .items a.ig{color:#e1306c}.socfab .items a.cn{color:var(--accent)}.socfab .items a:hover{transform:scale(1.1);border-color:currentColor}/*MOBILE-REFINE*/@media(max-width:640px){.tiebar .wrap span{display:none}.tiebar .wrap{justify-content:center}.socfab{right:16px;bottom:16px}.socfab .toggle{width:48px;height:48px}.socfab .toggle svg{width:20px;height:20px}.socfab .items a{width:42px;height:42px}.wrap{padding:0 20px}.nav-in{padding:14px 20px}.tiebar .wrap{padding:8px 20px}.sec{padding:58px 0}.sec-head{margin-bottom:30px}.phero{padding:66px 0 30px}.hero{min-height:auto}.hero .txt{padding:40px 0 36px}.hero .media{min-height:52vh}.foot-grid{margin-top:48px;gap:24px}footer{padding:64px 0 34px}.logo .mark{width:36px;height:36px}.logo .wm b{font-size:1.02rem}.logo .wm i{font-size:.5rem}}</style></head>
 <body>
 <div class="tiebar"><div class="wrap"><span>Youth &amp; Young Adult Church · MFM Mega Region 2, USA</span><a href="https://mfmmegaregion2usa.org" target="_blank" rel="noopener">Visit the main church →</a></div></div>
 <nav><div class="nav-in">
@@ -90,25 +99,30 @@ footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}foote
   <div class="drawer-footer"><p class="drawer-scripture">"Is not my word like as a fire? saith the Lord; and like a hammer that breaketh the rock in pieces?"<cite>— Jeremiah 23:29</cite></p></div>
 </aside>
 
-<header class="ghero">
-  <div class="t">
-    <span class="eyebrow">Give</span>
-    <h1>Fuel the <em>fire.</em></h1>
-    <p>Your generosity raises up a generation — funding youth ministry, outreach, and a home where the young can encounter God.</p>
-    <div><a class="btn solid" href="#methods">Ways to Give</a></div>
-  </div>
-  <div class="media"><div class="verse"><blockquote>“God loveth a cheerful giver.”<cite>— 2 Corinthians 9:7</cite></blockquote></div></div>
-</header>
+<header class="gh">
+    <img class="bg" src="img/worship-congregation.jpg" alt="">
+    <div class="ov"></div>
+    <div class="in">
+      <span class="eyebrow">Give</span>
+      <h1>Fuel the <em>fire.</em></h1>
+      <p>Your generosity raises up a generation — funding youth ministry, outreach, and a home where the young can encounter God.</p>
+    </div>
+  </header>
 
 <section class="sec" id="methods"><div class="wrap">
-  <div class="sec-head reveal"><span class="eyebrow">Ways to Give</span><h2>Simple ways to <em>sow.</em></h2><p>Every gift, large or small, goes straight into raising this generation.</p></div>
-  <div class="methods reveal" style="max-width:760px;margin:0 auto">
-    <div class="method"><div class="ic">✉️</div><h4>By Email / Transfer</h4><p>Send your gift to:</p><div class="val">mfmmegaregion2youthchurch@gmail.com</div></div>
-    <div class="method"><div class="ic">📱</div><h4>Zelle</h4><p>Scan to give via Zelle:</p><img src="img/zelle-qr.png" alt="Zelle QR code" style="width:170px;height:170px;margin:8px auto 10px;display:block;border-radius:10px;border:1px solid var(--line);padding:8px;background:#fff"><div class="val" style="font-size:.82rem;word-break:break-all">mfmmegaregion2youthchurch@gmail.com</div></div>
-    
-  </div>
-  <p class="taxnote reveal">Contributions are fully recognized for tax purposes.</p>
-</div></section>
+    <div class="sec-head reveal"><span class="eyebrow">Ways to Give</span><h2>Simple ways to <em>sow.</em></h2><p>Scan the code with your banking app, or open Zelle directly on this device.</p></div>
+    <div class="zcard reveal">
+      <img class="qr" src="img/zelle-qr.png" alt="Zelle QR code for Mountain of Fire and Miracles Ministries">
+      <div class="right">
+        <div class="zt"><span class="dot">Z</span> Give with Zelle</div>
+        <div class="sub">Send your gift securely — no fees, straight to the ministry.</div>
+        <div class="recip">Zelle recipient · Mountain of Fire and Miracles Ministries</div>
+        <div class="email">mfmmegaregion2youthchurch@gmail.com</div>
+        <a class="btn solid" href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiTU9VTlRBSU4gT0YgRklSRSBBTkQgTUlSQUNMRVMgTUlOSVNUUklFUyIsImFjdGlvbiI6InBheW1lbnQiLCJ0b2tlbiI6Im1mbW1lZ2FyZWdpb24yeW91dGhjaHVyY2hAZ21haWwuY29tIn0=" target="_blank" rel="noopener">Open in Zelle →</a>
+      </div>
+    </div>
+    <p class="taxnote reveal">Contributions are fully recognized for tax purposes.</p>
+  </div></section>
 
 <section class="sec white"><div class="wrap">
   <div class="sec-head reveal"><span class="eyebrow">Your Impact</span><h2>What your giving <em>does.</em></h2></div>
