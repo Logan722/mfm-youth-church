@@ -56,7 +56,7 @@ nav{position:sticky;top:0;z-index:60;background:color-mix(in srgb,var(--paper) 8
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent);background:#fff}
 .field textarea{min-height:110px;resize:vertical}
 .card .btn.solid{width:100%;justify-content:center;margin-top:6px}
-.note{font-size:.78rem;color:var(--dim);margin-top:14px;text-align:center}
+.note{font-size:.78rem;color:var(--dim);margin-top:14px;text-align:center}.checks{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:2px}.checks .chk{display:inline-flex;align-items:center;gap:8px;margin-bottom:0;font-size:.92rem;font-weight:400;letter-spacing:0;text-transform:none;color:var(--ink)}.checks .chk input{width:auto;padding:0;margin:0}
 
 /* contact strip */
 .contact{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;text-align:center}
@@ -114,7 +114,7 @@ footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}foote
 <section class="sec"><div class="wrap">
   <div class="sec-head reveal"><span class="eyebrow">Find Your People</span><h2>Ways to <em>get involved.</em></h2></div>
   <div class="ways reveal">
-    <div class="c"><div class="n">i</div><h3>Serve on a Team</h3><p>We run on volunteers. Serve in praise, drama, dance, media, ushering and more.</p><a href="#firsttimer">Get involved →</a></div>
+    <div class="c"><div class="n">i</div><h3>Serve on a Team</h3><p>We run on volunteers. Serve in praise, drama, dance, media, ushering and more.</p><a href="#serve">Get involved →</a></div>
     <div class="c"><div class="n">ii</div><h3>Gen218 Singles</h3><p>Purpose and community for single young adults, across Mega Region 2.</p><a href="https://mfmmegaregion2usa.org/gen218.html" target="_blank" rel="noopener">Explore Gen218 →</a></div>
     <div class="c"><div class="n">iii</div><h3>Join Us Online</h3><p>Can't make it in person? Catch our services live and on-demand on YouTube.</p><a href="watch.html">Watch &amp; join →</a></div>
     <div class="c"><div class="n">iv</div><h3>First Time?</h3><p>New here? Tell us you are coming and we will roll out the welcome.</p><a href="#firsttimer">Say hello →</a></div>
@@ -122,8 +122,8 @@ footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}foote
 </div></section>
 
 <section class="sec white"><div class="wrap">
-  <div class="sec-head center reveal"><span class="eyebrow">Reach Out</span><h2>Say hello, or let us <em>pray</em> with you.</h2></div>
-  <div class="reveal" style="max-width:620px;margin:0 auto">
+  <div class="sec-head center reveal"><span class="eyebrow">Reach Out &amp; Serve</span><h2>Say hello, pray, or <em>join a team.</em></h2></div>
+  <div class="forms reveal" style="max-width:940px;margin:0 auto">
     <form id="firsttimer" class="card jsform" name="reach-out" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="reach-out">
       <p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
@@ -136,6 +136,32 @@ footer h2{color:#fff;font-size:clamp(2.2rem,5.4vw,4rem);margin-bottom:28px}foote
       <div class="field"><label>Your message</label><textarea name="message" placeholder="Share as much or as little as you like"></textarea></div>
       <button class="btn solid" type="submit">Send →</button>
       <p class="note">Prayer requests go privately to our prayer team; first-time visits get a personal welcome.</p>
+    </form>
+    <form id="serve" class="card jsform" name="serve-signup" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="serve-signup">
+      <p style="display:none"><label>Leave this empty: <input name="bot-field"></label></p>
+      <h3>Serve on a Team</h3>
+      <p class="sub">Praise, drama, dance, media, ushering and more — there's a place for your gift.</p>
+      <div class="field"><label>Name</label><input type="text" name="name" placeholder="Your full name" required></div>
+      <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@example.com" required></div>
+      <div class="field"><label>Phone <span style="text-transform:none;letter-spacing:0;color:var(--dim)">(optional)</span></label><input type="tel" name="phone" placeholder="(346) 000-0000"></div>
+      <div class="field"><label>Which team(s)?</label>
+        <div class="checks">
+          <label class="chk"><input type="checkbox" name="teams" value="Praise &amp; Worship"> Praise &amp; Worship</label>
+          <label class="chk"><input type="checkbox" name="teams" value="Drama"> Drama</label>
+          <label class="chk"><input type="checkbox" name="teams" value="Dance"> Dance</label>
+          <label class="chk"><input type="checkbox" name="teams" value="Media &amp; Tech"> Media &amp; Tech</label>
+          <label class="chk"><input type="checkbox" name="teams" value="Ushering"> Ushering</label>
+          <label class="chk"><input type="checkbox" name="teams" value="Hospitality"> Hospitality</label>
+          <label class="chk"><input type="checkbox" name="teams" value="Prayer"> Prayer</label>
+          <label class="chk"><input type="checkbox" name="teams" value="Wherever needed"> Wherever needed</label>
+        </div>
+      </div>
+      <div class="field"><label>Availability</label>
+        <select name="availability"><option value="">Select…</option><option>Sundays</option><option>Thursdays</option><option>Both</option><option>Flexible / not sure yet</option></select></div>
+      <div class="field"><label>Anything else? <span style="text-transform:none;letter-spacing:0;color:var(--dim)">(optional)</span></label><textarea name="message" placeholder="Experience, questions, or how you'd like to help"></textarea></div>
+      <button class="btn solid" type="submit">Sign me up →</button>
+      <p class="note">We'll reach out to get you plugged in. Welcome to the team.</p>
     </form>
   </div>
 </div></section>
